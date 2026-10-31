@@ -1,19 +1,13 @@
-let sum =0;
-let count=0;
-while (true) {
-    let userNumber = prompt("enter your number:  \n" + "when your numbers is complete just write 'exit'");
+let userNumber = 0;
+let sum = 0;
+let count =0;
 
-    if (userNumber === 'exit')
-        break;
-
-    else if (typeof +userNumber !== "number") {
-        alert("please write numbers!")
-        continue
+while (userNumber !== -1){
+    userNumber = +prompt("enter your numbers: \n" + "when you want see Average enter '-1' ")
+    sum = sum + userNumber;
+    
+    if(userNumber !== -1){
+        count++;
     }
-
-    userNumber=+userNumber
-    sum += userNumber;
-    count++;
 }
-
-alert(sum/count)
+alert("sum: " + sum  + "\n count: " + count  + "Average: " + sum/count);
